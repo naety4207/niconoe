@@ -17,7 +17,6 @@ import svelte from "@astrojs/svelte";
 import swup from '@swup/astro';
 import sitemap from '@astrojs/sitemap';
 import { parseDirectiveNode } from "./src/plugins/remark-directive-rehype.js";
-import vercel from "@astrojs/vercel/serverless";
 const oklchToHex = str => {
   const DEFAULT_HUE = 250;
   const regex = /-?\d+(\.\d+)?/g;
@@ -105,6 +104,4 @@ export default defineConfig({
       }
     }
   },
-  output: "server",
-  adapter: vercel()
 });
