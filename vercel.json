@@ -1,1 +1,12 @@
-{}
+{
+    "version": 2,
+    "builds":[
+        {
+            "src":"astro.config.mjs",
+            "use":"@vercel/static-build"
+        }
+    ],
+    "routes":[
+        {"src":"/(.*)","dest":"/index.html"}
+    ]
+}
